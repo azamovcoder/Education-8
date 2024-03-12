@@ -1,0 +1,56 @@
+.courses{
+   .aptab-list{
+    padding: 100px 0;
+    // justify-content: space-around;
+
+    a{
+        color: $textCl;
+        font-size: 16px;
+        padding: 8px 16px;
+        border: transparent;
+        border-radius: 15px;
+        background: transparent;
+        transition: 0.4s;
+    }
+    a:hover{
+        color: $secondaryCl;
+        background: $hoverCl;
+
+    }
+   }
+   &__cards{
+  display: flex;
+  gap: 10px;
+
+   }
+   &__card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: aqua;
+    border-radius: 20px ;
+
+   }
+   &__card__img img{
+    width: 100%;
+    border-radius: 5px;
+   }
+   &__card__info{
+    position: relative;
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    gap: 20px;
+   }
+   &__card__desc{
+    top: -10%;
+    left: 30%;
+    position: absolute;
+    padding: 8px 10px;
+    background: #4586D6;
+    border-radius: 15px;
+    width: 150px;
+   }
+
+}
