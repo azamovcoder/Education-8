@@ -1,0 +1,15 @@
+.company{
+
+    &__title{
+        padding: 50px 0 ;
+        font-size: 45px;
+        text-align: center;
+    }
+    &__partners{
+        display: flex;
+        justify-content: center;
+        column-gap: 150px;
+        row-gap: 20px;
+        flex-wrap: wrap;
+    }
+}

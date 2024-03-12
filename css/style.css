@@ -355,11 +355,18 @@ button {
     justify-content: center;
   }
 }
-
-.courses .aptab-list {
-  padding: 100px 0;
+@media screen and (max-width: 550px) {
+  .hero .hero__search {
+    display: none;
+  }
 }
-.courses .aptab-list a {
+
+.courses .ap-tab-list {
+  display: flex;
+  padding: 100px 0;
+  justify-content: space-around;
+}
+.courses .ap-tab-list a {
   color: #CCCCCC;
   font-size: 16px;
   padding: 8px 16px;
@@ -368,20 +375,21 @@ button {
   background: transparent;
   transition: 0.4s;
 }
-.courses .aptab-list a:hover {
+.courses .ap-tab-list a:hover {
   color: white;
   background: #F72585;
 }
 .courses__cards {
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 .courses__card {
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: aqua;
+  box-shadow: 0px 0px 10px grey;
   border-radius: 20px;
 }
 .courses__card__img img {
@@ -402,5 +410,200 @@ button {
   padding: 8px 10px;
   background: #4586D6;
   border-radius: 15px;
-  width: 150px;
+}
+@media screen and (max-width: 1200px) {
+  .courses__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .courses__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.categories {
+  padding: 30px 0px;
+}
+.categories__title {
+  font-family: Rubik;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 30px 0px;
+}
+.categories__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.categories__cards img {
+  width: 100%;
+}
+.categories__card {
+  background-image: url(../../../images/art-design.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  border-radius: 20px;
+}
+.categories h3 {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 200px;
+  color: white;
+}
+@media (max-width: 1200px) {
+  .categories__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .categories__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .categories__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.about {
+  padding: 100px 0;
+}
+.about__cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.about__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mentor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.mentor__left {
+  width: 50%;
+}
+.mentor__left img {
+  border-radius: 20px;
+  width: 100%;
+}
+.mentor__right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.mentor__right h2 {
+  font-size: 38px;
+}
+.mentor__right p {
+  color: #CCCCCC;
+}
+.mentor__right button {
+  max-width: 150px;
+  padding: 10px 20px;
+  border: 1.5px solid black;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 16px;
+  color: black;
+  transition: 0.4s;
+}
+.mentor__right button:hover {
+  background: #F72585;
+  border: 1.5px solid #F72585;
+  color: white;
+}
+@media screen and (max-width: 800px) {
+  .mentor__left {
+    width: 70%;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  .mentor__right {
+    width: 70%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+.item {
+  width: 100%;
+  display: flex;
+}
+
+.carusel__left {
+  width: 50%;
+}
+.carusel__left img {
+  width: 100%;
+}
+
+.company__title {
+  padding: 50px 0;
+  font-size: 45px;
+  text-align: center;
+}
+.company__partners {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 150px;
+       column-gap: 150px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.blog__title {
+  font-size: 50px;
+  padding: 50px 0;
+}
+.blog__cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.blog__card {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0px 0px 5px grey;
+}
+.blog__card img {
+  width: 100%;
+  height: 60%;
+  border-radius: 20px;
+}
+.blog__card__info {
+  display: flex;
+  flex-direction: column;
+}
+.blog__card__info p {
+  color: #CCCCCC;
+}
+.blog__card__info h3 {
+  width: 80%;
+}
+.blog__card__info a {
+  color: #F72585;
 }

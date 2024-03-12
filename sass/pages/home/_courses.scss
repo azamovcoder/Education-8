@@ -1,7 +1,9 @@
 .courses{
-   .aptab-list{
+    
+   .ap-tab-list{
+    display: flex;
     padding: 100px 0;
-    // justify-content: space-around;
+    justify-content: space-around;
 
     a{
         color: $textCl;
@@ -19,8 +21,11 @@
     }
    }
    &__cards{
-  display: flex;
-  gap: 10px;
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 20px;
+   
+    
 
    }
    &__card{
@@ -28,7 +33,8 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-color: aqua;
+    // background-color: aqua;
+    box-shadow: 0px 0px 10px grey;
     border-radius: 20px ;
 
    }
@@ -50,7 +56,20 @@
     padding: 8px 10px;
     background: #4586D6;
     border-radius: 15px;
-    width: 150px;
+    // width: 150px;
    }
+@media screen and (max-width:1200px) {
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }}
 
+    @media screen and (max-width:700px) {
+        &__cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+}
 }
