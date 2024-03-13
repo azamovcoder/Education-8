@@ -578,21 +578,23 @@ button {
   padding: 50px 0;
 }
 .blog__cards {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin-bottom: 20px;
 }
 .blog__card {
   padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  box-shadow: 0px 0px 5px grey;
 }
 .blog__card img {
   width: 100%;
-  height: 60%;
   border-radius: 20px;
+}
+.blog__card:hover {
+  box-shadow: 0px 0px 10px grey;
 }
 .blog__card__info {
   display: flex;
@@ -606,4 +608,105 @@ button {
 }
 .blog__card__info a {
   color: #F72585;
+}
+@media screen and (max-width: 1200px) {
+  .blog__cards {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .blog__cards {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+}
+
+.footer {
+  padding: 80px 0;
+  background: #021934;
+}
+.footer__top {
+  display: flex;
+  gap: 100px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: white;
+}
+.footer__top__left {
+  max-width: 500px;
+}
+.footer__desc {
+  padding-top: 30px;
+  font-size: 16px;
+  line-height: 27px;
+}
+.footer__top__right {
+  display: flex;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+.footer__title {
+  padding-bottom: 24px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.footer__item {
+  font-size: 16px;
+  line-height: 30px;
+  padding-bottom: 8px;
+  transition: 0.5s;
+}
+.footer__item:hover {
+  color: #F72585;
+}
+.footer__bottom {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.footer__bottom__left {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.footer__bottom__desc {
+  font-size: 16px;
+  line-height: 27px;
+  color: white;
+  opacity: 0.8;
+}
+
+@media (max-width: 1290px) {
+  .footer__top {
+    gap: 30px;
+  }
+  .footer__top__left {
+    width: 90%;
+  }
+  .footer__top__left p {
+    width: 100%;
+  }
+}
+@media (max-width: 680px) {
+  .footer__top__right {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .footer__bottom {
+    gap: 20px;
+  }
+}
+@media (max-width: 370px) {
+  .footer {
+    padding: 20px 0;
+  }
+  .footer__bottom, .footer__bottom__left {
+    gap: 20px;
+  }
 }
